@@ -1,0 +1,12 @@
+body {
+  background: linear-gradient(to right, #f857a6, #ff5858);
+}
+.todoList {
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 300;
+}
+.main-box {
+  Box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  /* background: white; */
+}
+
