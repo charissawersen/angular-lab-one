@@ -11,7 +11,6 @@ interface Todo {
   templateUrl: './todo.component.html',
   styleUrls: ['./todo.component.css'],
 })
-
 export class TodoComponent implements OnInit {
   filter: string = '';
   todos: Todo[];
@@ -43,24 +42,22 @@ export class TodoComponent implements OnInit {
       },
     ];
   }
-  ngOninit(): void {
+  ngOninit(): void {}
 
-  }
-
-  newTask : TodoComponent;
-  addTask (newTask): void {
+  newTask: TodoComponent;
+  addTask(newTask): void {
     this.todos.push({ task: newTask, completed: false });
   }
 
-  removeTask (i) : void {
+  removeTask(i): void {
     this.todos.splice(i, 1);
     if (this.todos.length === 0) {
-      alert("Yay! Your tasks are done!");
+      alert('Yay! Your tasks are done!');
     }
   }
 
-  completeTask(i) : void {
-     this.todos[i].completed = true;
+  completeTask(i): void {
+    this.todos[i].completed = true;
   }
 
   getFilteredResults(): Todo[] {
