@@ -45,18 +45,18 @@ export class TodoComponent implements OnInit {
   ngOninit(): void {}
 
   newTask: TodoComponent;
-  addTask(newTask): void {
+  addTask(newTask: string): void {
     this.todos.push({ task: newTask, completed: false });
   }
 
-  removeTask(i): void {
+  removeTask(i: any): void {
     this.todos.splice(i, 1);
     if (this.todos.length === 0) {
       alert('Yay! Your tasks are done!');
     }
   }
 
-  completeTask(i): void {
+  completeTask(i: any): void {
     this.todos[i].completed = true;
   }
 
